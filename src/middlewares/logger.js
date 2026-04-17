@@ -1,6 +1,5 @@
 const LoggerMiddleware = (req, res, next) => {
-
-   const timestamp = new Date().toISOString();
+  const timestamp = new Date().toISOString();
 
   console.log(`[${timestamp} ${req.method} ${req.url} - IP: ${req.ip}]`);
 
@@ -12,7 +11,6 @@ const LoggerMiddleware = (req, res, next) => {
   });
 
   next();
-
 };
 
 module.exports = LoggerMiddleware;

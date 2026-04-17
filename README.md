@@ -7,34 +7,35 @@ El proyecto está pensado para desarrollarse por etapas, permitiendo que el equi
 
 ## Tecnologías y Dependencias
 
-- Node.js LTS  
-- Express.js  
-- MySQL  
-- npm (gestor de paquetes)  
-- dotenv (variables de entorno)  
-- ESLint (linter)  
-- Prettier (formatter)  
-- Swagger / swagger-ui-express (documentación API)  
+- Node.js LTS
+- Express.js
+- MySQL
+- npm (gestor de paquetes)
+- dotenv (variables de entorno)
+- ESLint (linter)
+- Prettier (formatter)
+- Swagger / swagger-ui-express (documentación API)
 
 ---
 
 ## Estándares de la API
 
-- Base URL: `/api/v1`  
-- Formato JSON para requests y responses  
+- Base URL: `/api/v1`
+- Formato JSON para requests y responses
 - Convenciones REST:
   - `GET` → lectura
   - `POST` → creación
   - `PUT/PATCH` → actualización
-  - `DELETE` → eliminación  
-- Respuestas consistentes con **envelope**:  
-```json
+  - `DELETE` → eliminación
+- Respuestas consistentes con **envelope**:
+
+````json
 {
   "success": true,
   "data": {...},
   "message": "Descripción"
 }
- 
+
 
 ---
 
@@ -51,56 +52,56 @@ El proyecto está pensado para desarrollarse por etapas, permitiendo que el equi
 ## 🎮 Catálogo de Productos
 
 ### 📦 Producto Base
-- Título, descripción, franquicia  
-- Desarrollador, publisher, año  
-- Género(s), clasificación (ESRB/PEGI)  
-- Plataformas compatibles  
-- SEO: slug, tags  
+- Título, descripción, franquicia
+- Desarrollador, publisher, año
+- Género(s), clasificación (ESRB/PEGI)
+- Plataformas compatibles
+- SEO: slug, tags
 
 ### 🧩 Variante / Edición
-- Plataforma, región, idioma  
-- Edición (standard, limited, etc.)  
-- Estado: new, used, refurbished  
-- Compleción: loose, CIB, sin manual  
+- Plataforma, región, idioma
+- Edición (standard, limited, etc.)
+- Estado: new, used, refurbished
+- Compleción: loose, CIB, sin manual
 
 ---
 
 ## 📦 Inventario
 
 - 🆔 InventoryItem (unidad única)
-- 📊 Estados: disponible, reservado, vendido  
-- ⏳ StockReservation (reservas temporales)  
-- 🔄 StockMovement (auditoría de movimientos)  
+- 📊 Estados: disponible, reservado, vendido
+- ⏳ StockReservation (reservas temporales)
+- 🔄 StockMovement (auditoría de movimientos)
 
 ---
 
 ## 💰 Precios
 
-- Precio base por variante  
-- Precio por unidad  
-- Historial de cambios (auditoría)  
+- Precio base por variante
+- Precio por unidad
+- Historial de cambios (auditoría)
 
 ---
 
 ## 🔍 Búsqueda y Navegación
 
-- Categorías: juegos, consolas, accesorios  
-- Filtros: plataforma, región, condición, precio  
-- Orden: relevancia, precio, más vendidos  
+- Categorías: juegos, consolas, accesorios
+- Filtros: plataforma, región, condición, precio
+- Orden: relevancia, precio, más vendidos
 
 ---
 
 ## 🛒 Carrito y Checkout
 
 ### 🛒 Carrito
-- Anónimo o autenticado  
-- Items con snapshot de precio  
+- Anónimo o autenticado
+- Items con snapshot de precio
 
 ### 💳 Checkout
-- Dirección de envío  
-- Método de envío  
-- Pago (Stripe, PayPal, MercadoPago)  
-- Validaciones de stock y cupones  
+- Dirección de envío
+- Método de envío
+- Pago (Stripe, PayPal, MercadoPago)
+- Validaciones de stock y cupones
 
 ---
 
@@ -117,10 +118,10 @@ El proyecto está pensado para desarrollarse por etapas, permitiendo que el equi
 
 ## 👤 Clientes
 
-- Perfil y preferencias  
-- Direcciones múltiples  
-- Wishlist ❤️  
-- Reseñas ⭐  
+- Perfil y preferencias
+- Direcciones múltiples
+- Wishlist ❤️
+- Reseñas ⭐
 
 ---
 
@@ -152,3 +153,4 @@ LinkedIn: https://www.linkedin.com/in/juan-carlos-moncada-omaña-2b671a347
 
 
 
+````

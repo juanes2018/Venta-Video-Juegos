@@ -1,4 +1,4 @@
-const {Router} = require('express');
+const { Router } = require('express');
 const productController = require('../controllers/productController');
 const authenticaToken = require('../middlewares/auth');
 const role = require('../middlewares/role');
@@ -73,8 +73,12 @@ const router = Router();
  *         description: No autorizado - Token JWT faltante
  */
 
-
-router.get('/', authenticaToken, role([2, 3]), productController.getAllProducts);
+router.get(
+  '/',
+  authenticaToken,
+  role([2, 3]),
+  productController.getAllProducts
+);
 
 /**
  * @swagger
@@ -107,9 +111,12 @@ router.get('/', authenticaToken, role([2, 3]), productController.getAllProducts)
  *         description: No encontrado
  */
 
-
-
-router.get('/:id', authenticaToken, role([2,3]), productController.getProductById);
+router.get(
+  '/:id',
+  authenticaToken,
+  role([2, 3]),
+  productController.getProductById
+);
 
 /**
  * @openapi
@@ -140,9 +147,6 @@ router.get('/:id', authenticaToken, role([2,3]), productController.getProductByI
  *       403:
  *         description: Prohibido - Solo administradores (Rol 3) pueden crear productos
  */
-
-
-
 
 router.post('/', authenticaToken, role([3]), productController.createProduct);
 
@@ -187,12 +191,6 @@ router.post('/', authenticaToken, role([3]), productController.createProduct);
 
 router.put('/:id', authenticaToken, role([3]), productController.updateProduct);
 
-
-
-
-
-
-
 /**
  * @openapi
  * /products/{id}:
@@ -229,6 +227,11 @@ router.put('/:id', authenticaToken, role([3]), productController.updateProduct);
  *         description: No se encontró el videojuego con ese ID
  */
 
-router.delete('/:id', authenticaToken, role([3]), productController.deleteProduct);
+router.delete(
+  '/:id',
+  authenticaToken,
+  role([3]),
+  productController.deleteProduct
+);
 
 module.exports = router;

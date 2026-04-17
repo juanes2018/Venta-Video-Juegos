@@ -4,9 +4,6 @@ const authenticateToken = require('../middlewares/auth');
 const role = require('../middlewares/role');
 const router = Router();
 
-
-
-
 router.post('/', authenticateToken, role(['admin']), roleController.createRole);
 router.get('/', authenticateToken, role(['admin']), roleController.getRoles);
 router.get('/:id', authenticateToken, roleController.getRoleById);

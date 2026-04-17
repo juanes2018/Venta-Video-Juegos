@@ -6,13 +6,13 @@ const options = {
     info: {
       title: 'Venta de Video Juegos Retro Online',
       version: '1.0.0',
-      description: 'Documentación de la API de videojuegos con autenticación'
+      description: 'Documentación de la API de videojuegos con autenticación',
     },
     servers: [
       {
         url: 'http://localhost:3000/api/v1',
-        description: 'Servidor de Desarrollo'
-      }
+        description: 'Servidor de Desarrollo',
+      },
     ],
     // ESTO ES NUEVO: Necesario para que el candado de autenticación funcione
     components: {
@@ -24,7 +24,7 @@ const options = {
         },
       },
     },
-     security: [
+    security: [
       {
         bearerAuth: [],
       },
@@ -36,12 +36,3 @@ const options = {
 
 const openapiSpecification = swaggerJsdoc(options);
 module.exports = openapiSpecification;
-
-
-
-
-
-
-
-
-

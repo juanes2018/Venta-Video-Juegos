@@ -15,17 +15,13 @@ const priceRouter = require('./priceRoutes');
 const priceHistoryRouter = require('./priceHistoryRoutes');
 const cartRouter = require('./cartRoutes');
 
-
-
-
-
 const router = Router();
 
-router.use('/auth',authRouter);
+router.use('/auth', authRouter);
 router.use('/role', roleRouter);
 router.use('/users', userRouter);
 router.use('/cart', guestCartRouter);
-router.use('/products', productRouter); 
+router.use('/products', productRouter);
 router.use('/productVariants', productVariantRouter);
 router.use('/productMedia', productMediaRouter);
 router.use('/category', categoryRouter);
